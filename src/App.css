@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
-}
+    /* ====== GLOBAL RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+    /* ====== NO SCROLLBARS AT ALL ====== */
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    .App {
+      text-align: center;
+    }
 
-.App-link {
-  color: #61dafb;
-}
+    .App-logo {
+      height: 40vmin;
+      pointer-events: none;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    /* 🔧 REMOVE WHITE GAP BELOW NAVBAR */
+    .navbar {
+      margin-bottom: 0 !important;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+      }
+    }
+
+    .App-header {
+      background-color: #282c34;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+      color: white;
+    }
+
+    .App-link {
+      color: #61dafb;
+    }
+
+    /* ===== COMMON INPUT STYLE ===== */
+    .custom-input {
+      border: none !important;
+      border-bottom: 2px solid #adb5bd !important;
+      /* light gray */
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      outline: none !important;
+      background-color: transparent !important;
+      padding-right: 40px;
+      /* space for eye icon */
+      transition: border-color 0.3s ease;
+    }
+
+    /* ===== FOCUS STYLE ===== */
+    .custom-input:focus {
+      border-bottom: 2px solid #000 !important;
+      /* black on focus */
+      box-shadow: none !important;
+    }
+
+    /* ===== REMOVE BOOTSTRAP INPUT-GROUP LINE ===== */
+    .input-group-text {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* ===== EYE ICON POSITION ===== */
+    .eye-icon {
+      position: absolute;
+      right: 10px;
+      top: 70%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #6c757d;
+      z-index: 5;
+    }
+
+    /* Clear (X) icon */
+    .clear-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #adb5bd;
+      z-index: 5;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .clear-icon:hover {
+      color: #000;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    @keyframes App-logo-spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }

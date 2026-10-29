@@ -1,0 +1,25 @@
+### Create User
+POST http://localhost:5000/api/auth/createuser
+Content-Type: application/json
+
+{
+  "name": "Harash kumar Behera4",
+  "email": "harash38947gg5@gmail.com",
+  "password": "jlsaddjhjfk83hl6"
+}
+
+### User login using cred
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "harash38947gg5@gmail.com",
+  "password": "jlsaddjhjfk83hl6"
+}
+
+### Get user data
+
+POST http://localhost:5000/api/auth/getuser
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjk0YTE1OTgzNTdmMmM1NmJiZTgyNGNlIn0sImlhdCI6MTc2NjQ2NzA2N30.4oK13NwLultPyHluOm0gypcvxN4qcTUSHdJ_095ykqo
+

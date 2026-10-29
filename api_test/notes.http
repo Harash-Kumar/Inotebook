@@ -1,0 +1,34 @@
+### fetch all notes
+
+GET  http://localhost:5000/api/notes/fetchallnotes
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjk0YTE1OTgzNTdmMmM1NmJiZTgyNGNlIn0sImlhdCI6MTc2NjQ2NzA2N30.4oK13NwLultPyHluOm0gypcvxN4qcTUSHdJ_095ykqo
+
+### Add note
+
+POST http://localhost:5000/api/notes/addnote
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjk0YTE1OTgzNTdmMmM1NmJiZTgyNGNlIn0sImlhdCI6MTc2NjQ2NzA2N30.4oK13NwLultPyHluOm0gypcvxN4qcTUSHdJ_095ykqo
+Content-Type: application/json
+
+{
+    "title": "My title",
+    "description": "Please wake up early",
+    "tag": "illeagal"
+}
+
+### Update note
+
+PUT http://localhost:5000/api/notes/updatenote/694a7e031c19592efff49a8a
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjk0YTE1OTgzNTdmMmM1NmJiZTgyNGNlIn0sImlhdCI6MTc2NjQ2NzA2N30.4oK13NwLultPyHluOm0gypcvxN4qcTUSHdJ_095ykqo
+Content-Type: application/json
+
+{
+    "title": "My title 2656",
+    "description": "Please wake up early it's a good habbit",
+    "tag": "illeagal"
+}
+
+### Delete Note
+
+DELETE  http://localhost:5000/api/notes/deletenote/694a7e031c19592efff49a8a
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjk0YTE1OTgzNTdmMmM1NmJiZTgyNGNlIn0sImlhdCI6MTc2NjQ2NzA2N30.4oK13NwLultPyHluOm0gypcvxN4qcTUSHdJ_095ykqo
+Content-Type: application/json
